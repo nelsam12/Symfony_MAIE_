@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+	<div class="w-1/2 mx-auto shadow p-4">
+		<h1>Client</h1>
+		{% if client.compte %}
+			<p class="uppercase">Nom :
+				{{ client.compte.nom }}
+			</p>
+			<p class="uppercase">Prenom :{{ client.compte.prenom }}
+			</p>
+
+		{% else %}
+			<p class="p-3 rounded my-2 bg-blue-100 text-blue-600">Pas de compte
+			</p>
+		{% endif %}
+
+		<p class="uppercase">
+			surname :{{ client.surname }}
+		</p>
+	</div>
+
+{% endblock %}

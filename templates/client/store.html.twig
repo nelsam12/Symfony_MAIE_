@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+	<div class="w-1/2 p-2 shadow-sm rounded mx-auto border">
+		{{ form_start(form, {'attr' : {}}) }}
+		<h2 class="text-center uppercase font-bold text-2xl text-blue-600">
+			Formulaire d'ajout client
+		</h2>
+		{{ form_label(form.surname) }}
+		{{ form_widget(form.surname) }}
+		{{ form_label(form.telephone) }}
+		{{ form_widget(form.telephone) }}
+		{{ form_label(form.adresse) }}
+		{{ form_widget(form.adresse) }}
+		<div>
+			<button type="submit" class="mt-5 p-2 px-6 border border-blue-800 hover:bg-blue-800 hover:text-white text-blue-800 rounded">Save<button></div>
+				{{ form_end(form) }}
+		</div>
+		{% endblock %}
